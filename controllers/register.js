@@ -5,6 +5,8 @@ const querySchema = {name: 'register', userDetails: ''};
 const reqisterQueries = new Queries(querySchema);
 
 const registerUser = async (req, res) => {
+    console.log('registerUser in register.js');
+    
         const {username, password, firstName, lastName, email} = req.body;
         const salt = await bcrypt.genSalt();
         const hashedPassword = await bcrypt.hash(password, salt);

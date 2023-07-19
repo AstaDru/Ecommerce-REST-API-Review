@@ -1,4 +1,6 @@
 const validateCreditCard = (number) => {
+    console.log('validates card');
+    
     let final = 0;
     for(let digit = 0; digit < number.length; digit ++) {
         if((digit+1)%2===1){
